@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Link from "next/link";
 // importem algum ícone de lixeira aqui
 
 // MÉTODO PARA EXIBIR OU REALIZAR O "GET" DO BACKEND
@@ -35,7 +36,7 @@ if (loading) return <div> Carregando Comentários... </div>
 
 // EXIBINDO A LISTA DE COMENTÁRIOS DO BANCO
 return(
-    <div>
+    <div className="mx-2">
         <h1> Lista de Comentários </h1>
 
         {comments.length === 0 ? (
@@ -45,9 +46,17 @@ return(
                 {Array.isArray(comments) && comments.map((comment) => (
                 <li key={comment.id}>
                     <div>{comment.comment}</div>
-                    <div>
-                        <button className="cursor-pointer p-2 border" onClick={() => handleDelete(comment.id)}> DELETAR </button>
+
+                    <div className="flex mt-2">
+                    <div className="mt-4">
+                        <Link className="cursor-pointer p-2.5 border" href={`/editComment/${comment.id}`}> EDITAR </Link>
+                    
                     </div>
+                    <div>
+                        <button className="cursor-pointer p-1.5 m-2 border" onClick={() => handleDelete(comment.id)}> DELETAR </button>
+                    </div>
+                    </div>
+                 
                 </li> 
             ))}
          </ul>

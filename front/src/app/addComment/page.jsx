@@ -29,7 +29,7 @@ export default function addComment() {
     return (
         <div>
 
-            <form onSubmit={ handleSubmit }>
+            <form className="mx-2" onSubmit={ handleSubmit }>
                 <div>
                     <label htmlFor="comment"> COMENTE AQUI </label>
                     <input 
