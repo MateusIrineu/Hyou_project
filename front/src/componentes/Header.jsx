@@ -10,7 +10,7 @@ const Header = () => {
     return (
         <div>
             <header>
-                <nav className="bg-black-950 text-white p-5 border">
+                <nav className="bg-black-950 p-5 border">
                     <Link href='/'> Início </Link>
                     <Link href='#'> Animes </Link>
                     <Link href='/comments'> Meus Comentários </Link>

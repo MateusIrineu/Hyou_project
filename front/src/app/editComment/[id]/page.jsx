@@ -57,6 +57,7 @@ export default function EditCommentPage() {
 
     return (
         <div className="border w-200 p-5">
+            <div className="h-16"></div>
             <h1> EDIÇÃO DE COMENTÁRIOS </h1>
 
             {loading ? (
