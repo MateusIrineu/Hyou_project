@@ -1,10 +1,11 @@
 import { getServerSession } from "next-auth";
 import { authOptions } from "../api/auth/[...nextauth]/route";
-import Logout from "@/componentes/Logout";
-
+import Teste from "../../componentes/teste";
+import { redirect } from "next/navigation";
 
 export default async function Dashboard() {
     const session = await getServerSession(authOptions)
+    console.log("Sessão:", session);
 
     if (!session) {
         return (
@@ -15,17 +16,9 @@ export default async function Dashboard() {
         )
     }
 
-
+    
     return (
-        <div>
-            <div>
-                Olá, {session?.user?.name}
-            </div>
-            <p>BLA BLA BLA</p>
-
-            <div>
-                <Logout/>
-            </div>
-        </div>
-    )
+        
+        redirect("/")
+   )
 }

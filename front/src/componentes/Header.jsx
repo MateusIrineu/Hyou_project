@@ -15,7 +15,7 @@ const Header = () => {
                     <Link href='#'> Animes </Link>
                     <Link href='/comments'> Meus Comentários </Link>
                      <div className="mt-3.5">
-                        <button type="submit" onClick={() => signIn("github", {callbackUrl: "/dashboard"})} className="cursor-pointer"> Entrar </button>
+                        <button type="submit" onClick={() => signIn("github", {callbackUrl: "/dashboard"}, )} className="cursor-pointer"> Entrar </button>
                     </div>
                     <div>
                         <button onClick={() => signOut({callbackUrl: "/"})} className="cursor-pointer"> Sair </button>

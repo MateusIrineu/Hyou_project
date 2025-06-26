@@ -18,7 +18,7 @@ export default function Lancamentos() {
       <h2 className="text-3xl text-center font-bold text-white mb-6">LANÇAMENTOS RECENTES</h2>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-8">
         {cards.map((card) => (
-          <div key={card} className="bg-slate-900 hover:scale-102 duration-200 transition-all cursor-pointer rounded overflow-hidden">
+          <div key={card.id} className="bg-slate-900 hover:scale-102 duration-200 transition-all cursor-pointer rounded overflow-hidden">
             <div className="bg-slate-500 h-32">
               <img
                 src={card.capa}

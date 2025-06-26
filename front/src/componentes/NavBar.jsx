@@ -14,7 +14,7 @@ export default function Navbar() {
                     <li><a href="/">Inicio</a></li>
                     <li><a href="/">Animes</a></li>
                     <Link href='/comments'> Meus Comentários </Link>
-                    <div className=" ml-auto">
+                    <div className=" ml-auto br-red-500">
                         <button type="submit" onClick={() => signIn("github", { callbackUrl: "/dashboard" })} className="cursor-pointer"> Entrar </button>
                     </div>
                     <div>
