@@ -1,46 +1,21 @@
 'use client';
 
-import { useState } from "react";
-// import { useRouter } from "next/navigation";
-import axios from "axios";
+import AnimeBanner from "@/componentes/animeBanner";
+import AnimePlayer from "@/componentes/animeplayer";
+import Temporadas from "@/componentes/temporada";
 
 export default function addComment() {
-    const [comment, setComment] = useState('');
-    // const router = useRouter();
-
-
-    // MÉTODO PARA COMENTAR
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-
-        try {
-            await axios.post('http://localhost:3000/comments', {
-                comment
-            });
-
-            setComment('');
-            // router.push('/comments');
-        } catch (error) {
-            console.log('Erro ao adicionar comentário: ', error);
-            alert('Erro ao adicionar comentário, servidor fora do ar.');
-        }
-    };
 
     return (
-        <div>
-
-            <form className="mx-2" onSubmit={ handleSubmit }>
-                <div>
-                    <label htmlFor="comment"> COMENTE AQUI </label>
-                    <input 
-                    type="text" 
-                    value={ comment }
-                    onChange={e => setComment(e.target.value)}
-                    placeholder="Digite seu comentário"
-                    />
-                </div>
-                <button className="cursor-pointer p-2 border" type="submit"> Adicionar </button>
-            </form>
+        <div bg-slate-700 text-white min-h-screen>
+        < AnimeBanner />
+        <div className="flex flex-col">
+      <div className="max-w-6xl mx-auto px-4 py-8 flex justify-around gap-5">
+        <AnimePlayer />
+        <Temporadas />
+      </div>
+      </div>
         </div>
     )
 }
+

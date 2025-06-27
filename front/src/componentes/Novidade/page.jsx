@@ -18,9 +18,8 @@ export default function Novidades() {
       <div className="flex justify-around gap-6 flex-wrap">
         {animes.map((anime) => (
           <Link
-            href="href='/addComment'"
+            href="/addComment"
             key={anime.id}
-            onClick={() => localStorage.setItem('animeSelecionado', JSON.stringify(anime))}
             className="w-[250px] h-[450px] hover:scale-105 bg-slate-700 rounded-lg g shadow-md flex flex-col justify-end cursor-pointer duration-200 transition-all"
           >
             <div className="relative w-full h-full">
